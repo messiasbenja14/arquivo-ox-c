@@ -33,8 +33,6 @@ int main(int argc, char *argv[])
     }
 
     gravar(matriz, argv[1]);
-
-  printf("feito por benjamim messias");
   
     return 0;
 }
