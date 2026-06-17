@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 int validar(char c);
-void gravar(char matriz[3][3], char nomeArquivo[]);
+void gravar(char mat[3][3], char arq[]);
 
 int main(int argc, char *argv[])
 {
-    char matriz[3][3];
+    char mat[3][3];
     int i, j;
     int k = 2;
 
@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
     {
         for(j = 0; j < 3; j++)
         {
-            matriz[i][j] = argv[k][0];
+            mat[i][j] = argv[k][0];
 
-            if(!validar(matriz[i][j]))
+            if(!validar(mat[i][j]))
             {
                 printf("Erro: use apenas X ou O\n");
                 return 1;
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    gravar(matriz, argv[1]);
-  
+    gravar(mat, argv[1]);
+
     return 0;
 }
