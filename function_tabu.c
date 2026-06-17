@@ -8,29 +8,29 @@ int validar(char c)
     return 0;
 }
 
-void gravar(char matriz[3][3], char nomeArquivo[])
+void gravar(char mat[3][3], char arq[])
 {
-    FILE *arquivo;
+    FILE *f;
 
-    arquivo = fopen(nomeArquivo, "w");
+    f = fopen(arq, "w");
 
-    if(arquivo == NULL)
+    if(f == NULL)
     {
         printf("Erro ao criar arquivo\n");
         return;
     }
 
-    fprintf(arquivo, "| %c | %c | %c |\n",
-            matriz[0][0], matriz[0][1], matriz[0][2]);
+    fprintf(f, "| %c | %c | %c |\n",
+            mat[0][0], mat[0][1], mat[0][2]);
 
-    fprintf(arquivo, "| %c | %c | %c |\n",
-            matriz[1][0], matriz[1][1], matriz[1][2]);
+    fprintf(f, "| %c | %c | %c |\n",
+            mat[1][0], mat[1][1], mat[1][2]);
 
-    fprintf(arquivo, "| %c | %c | %c |\n",
-            matriz[2][0], matriz[2][1], matriz[2][2]);
+    fprintf(f, "| %c | %c | %c |\n",
+            mat[2][0], mat[2][1], mat[2][2]);
 
-    fprintf(arquivo, "\n");
-    fprintf(arquivo, "Criado por Benjamim messias");
+    fprintf(f, "\n");
+    fprintf(f, "Criado por Benjamim messias");
 
-    fclose(arquivo);
+    fclose(f);
 }
