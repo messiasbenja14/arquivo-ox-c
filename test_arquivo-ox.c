@@ -1,6 +1,6 @@
 #include <assert.h>
 
-int validar(char c);
+#include "function_aqox.c"
 
 int main()
 {
