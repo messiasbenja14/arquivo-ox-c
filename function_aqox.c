@@ -2,7 +2,7 @@
 
 int validar(char c)
 {
-    if(c == 'X' || c == 'O')
+    if (c == 'X' || c == 'O')
         return 1;
 
     return 0;
@@ -10,11 +10,9 @@ int validar(char c)
 
 void gravar(char mat[3][3], char arq[])
 {
-    FILE *f;
+    FILE *f = fopen(arq, "w");
 
-    f = fopen(arq, "w");
-
-    if(f == NULL)
+    if (f == NULL)
     {
         printf("Erro ao criar arquivo\n");
         return;
@@ -29,8 +27,7 @@ void gravar(char mat[3][3], char arq[])
     fprintf(f, "| %c | %c | %c |\n",
             mat[2][0], mat[2][1], mat[2][2]);
 
-    fprintf(f, "\n");
-    fprintf(f, "Criado por Benjamim messias");
+    fprintf(f, "\nCriado por Benjamim Messias");
 
     fclose(f);
 }
